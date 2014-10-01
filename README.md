@@ -1,4 +1,5 @@
-# Data Science 10, General Assembly San Francisco
+# Data Science 10
+## General Assembly, San Francisco
 
 This repository contains all the material, lab notebooks and homeworks for the Data Science 10 class.
 
