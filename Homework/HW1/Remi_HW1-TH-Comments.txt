@@ -1,0 +1,18 @@
+Step 1:
+Great job. 
+
+Step 2:
+Looks good.
+
+Extra Credit:
+Slight issue - you're grouping by day + hour. So if we have more than one month, you might be lumping 9/22 and 10/22 as the same day and over count.
+Instead I would group by date + hour.
+
+In code:
+"SELECT date(timestamp) AS date, \
+                strftime('%H', timestamp) AS hour, \
+                count(*) \
+         FROM ga_hw_logins \
+         GROUP BY date, hour \
+         ORDER BY count(*) DESC \
+         LIMIT 5"
