@@ -42,11 +42,13 @@ def cleanData():
 
 def scoreModels(features, target, folds=10):
     "Calcs crovs-validation scores for multiple algorithms"
+    import pdb
+    #pdb.set_trace()
     models = []
     models.append(RandomForestClassifier(random_state=0).fit)
     models.append(LogisticRegression(C=1.0).fit)
     models.append(KNeighborsClassifier(3).fit)
-    models.append(SVC(C=1.0))
+    models.append(SVC(C=1.0).fit)
     models.append(GaussianNB().fit)
 
     for alg in models:
